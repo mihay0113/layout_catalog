@@ -27,7 +27,7 @@
 
     &:hover {
       border: 3px solid #f3f3f3;
-      transform: translateZ(20px);
+      transform: scale(120%);
     }
   }
 
@@ -93,6 +93,7 @@
     height: 40px;
     border-radius: 5px;
     margin: 20px 14px 15px;
+    transition: color, background-color 400ms linear;
 
     &:hover {
       background-color: white;
