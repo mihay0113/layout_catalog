@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 200px;
+  padding: 32px 16px 16px;
   background-color: white;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  perspective: 100px;
 
   &__rate,
   &__product,
@@ -14,13 +16,21 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 0 14px;
   }
 
   &__image {
     width: 160px;
     height: 134px;
-    margin: 29px 19px 45px;
+    align-self: center;
+    margin-bottom: 40px;
+    cursor: zoom-in;
+    transition: transform 400ms linear;
+    transform-origin: bottom center;
+
+    &:hover {
+      border: 3px solid #f3f3f3;
+      transform: scale(1.25);
+    }
   }
 
   &__product {
@@ -28,20 +38,21 @@
     font-size: 12px;
     line-height: 15px;
     text-align: left;
+    margin-bottom: 2px;
   }
 
   &__product-code {
     font-size: 11px;
     line-height: 13px;
     font-weight: 400;
-    margin-top: 6px;
+    margin-bottom: 16px;
   }
 
   &__rate {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-top: 15px;
+    margin-bottom: 24px;
   }
 
   &__reviews-count {
@@ -53,7 +64,7 @@
 
   &__cost {
     align-items: baseline;
-    margin-top: 19px;
+    margin-bottom: 16px;
   }
   
   &__price {
@@ -73,6 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 16px;
     color: white;
     background-color: rgba(0, 172, 220, 1);
     border: 1px solid rgba(0, 172, 220, 1);
@@ -84,7 +96,7 @@
     width: 170px;
     height: 40px;
     border-radius: 5px;
-    margin: 20px 14px 15px;
+    transition: color, background-color 400ms linear;
 
     &:hover {
       background-color: white;
