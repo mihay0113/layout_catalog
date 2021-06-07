@@ -5,6 +5,7 @@
   background-color: white;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  perspective: 100px;
 
   &__rate,
   &__product,
@@ -21,6 +22,13 @@
     width: 160px;
     height: 134px;
     margin: 29px 19px 45px;
+    cursor: zoom-in;
+    transition: transform 400ms linear;
+
+    &:hover {
+      border: 3px solid #f3f3f3;
+      transform: translateZ(20px);
+    }
   }
 
   &__product {
